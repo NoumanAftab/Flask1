@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+  
+   <div class="main_container" style="width: 1000px;">
+
+    <div class="container" style="width: 500px;">
+      <h3>Update Data</h3>
+      <form action="/update/{{currdata.sno}}" method="post">
+
+        <div class="mb-3">
+          <label for="fname" class="form-label">First Name</label>
+          <input type="text" class="form-control" value="{{currdata.firstname}}" name="first_name" id="fname" aria-describedby="fname">
+        </div>
+        <div class="mb-3">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" value="{{currdata.lastname}}" name="last_name" id="lname" aria-describedby="lname">
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input type= "number" class="form-control" value="{{currdata.age}}" name="age" id="age" aria-describedby="age">
+        </div>        
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+      </form>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock body %}
